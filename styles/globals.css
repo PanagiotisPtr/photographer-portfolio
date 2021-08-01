@@ -1,0 +1,12 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  color: red;
+  background-color: rgb(255, 0, 0);
+}
+
+h1 {
+  color: red;
+}
