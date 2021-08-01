@@ -1,14 +1,12 @@
-import Head from 'next/head'
+import MainMenu from '../components/MainMenu'
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
-      <Head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab" />
-      </Head>
-      <body>
-        <h1>Hello</h1>
-      </body>
+      <MainMenu />
+      <h1>Home</h1>
     </div>
   )
 }
+
+export default Home

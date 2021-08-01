@@ -1,0 +1,82 @@
+.menu {
+  font-size: 2em;
+  margin-bottom: 2vh;
+}
+
+.rowContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.colContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.centerContent {
+  align-items: center;
+  justify-content: center;
+}
+
+.burger {
+  padding-top: 2vh;
+  margin-left: auto;
+  z-index: 2;
+  margin-right: 5vw;
+}
+
+.title {
+  padding-top: 2vh;
+  margin-left: 4vw;
+  font-weight: bold;
+}
+
+.list {
+  margin-left: auto;
+  margin-top: 2vh;
+}
+
+.horizontalListItem {
+  margin-right: 4vw;
+}
+
+.verticalListItem {
+  margin-top: 4vh;
+}
+
+.listItem :hover {
+  color: grey;
+  text-decoration: underline;
+}
+
+.listItem > a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.overlay {
+  position: absolute;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(200, 200, 200);
+  z-index: 1;
+  transition: 0.5s;
+  overflow-y: hidden;
+}
+
+.overlay.open {
+  height: 100%;
+}
+
+.overlay.close {
+  height: 0%;
+}
