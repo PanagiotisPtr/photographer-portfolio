@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const minDesktopWidth = 1450;
+const minDesktopWidth = 1024;
 
 /**
  * useIsDesktop

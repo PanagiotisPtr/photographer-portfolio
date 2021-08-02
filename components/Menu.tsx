@@ -14,7 +14,7 @@ interface ListProps {
   items: Array<MenuItem>
 }
 
-interface Props {
+interface MenuProps {
   title: string;
   items: Array<MenuItem>;
 }
@@ -69,7 +69,7 @@ const MobileList: React.FC<ListProps> = ({ items }) => {
   );
 };
 
-const Menu: React.FC<Props> = ({
+const Menu: React.FC<MenuProps> = ({
   title,
   items
 }) => {
