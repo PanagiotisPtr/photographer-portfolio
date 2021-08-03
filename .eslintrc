@@ -1,3 +1,7 @@
 {
-  "extends": ["next", "next/core-web-vitals"]
+  "extends": ["next", "next/core-web-vitals"],
+  "rules": {
+    // Can't generate static pages if we use next/image
+    "@next/next/no-img-element": "off"
+  }
 }
