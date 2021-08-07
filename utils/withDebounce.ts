@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-export type CallbackFunction<T> = (...args: any[]) => T;
+import { CallbackFunction } from "./types/CallbackFunction";
 
 /**
  * withDebounce

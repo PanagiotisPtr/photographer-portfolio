@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const minDesktopWidth = 1024;
 
@@ -20,7 +20,7 @@ const useIsDesktop = (): boolean => {
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
-    
+
     // ensure we compute the state at least once
     updateMedia();
 

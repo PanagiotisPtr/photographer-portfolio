@@ -22,7 +22,7 @@ interface MenuProps {
 const DesktopList: React.FC<ListProps> = ({ items }) => {
   return (
     <div className={[styles.list, styles.rowContainer].join(" ")}>
-      {items.map((item, index) => (
+      {items.map((item: MenuItem, index: number) => (
         <div
           key={index}
           className={[styles.listItem, styles.horizontalListItem].join(" ")}
@@ -72,7 +72,7 @@ const MobileList: React.FC<ListProps> = ({ items }) => {
               ].join(" ")}
             >
               <div className={styles.colContainer}>
-                {items.map((item, index) => (
+                {items.map((item: MenuItem, index: number) => (
                   <div
                     key={index}
                     className={[styles.listItem, styles.verticalListItem].join(
@@ -99,7 +99,9 @@ const Menu: React.FC<MenuProps> = ({ title, items }) => {
   return (
     <>
       <div className={[styles.rowContainer, styles.menu].join(" ")}>
-        <span className={styles.title}>{title}</span>
+        <span className={[styles.title, styles.selectDisable].join(" ")}>
+          {title}
+        </span>
         {isDesktop ? (
           <DesktopList items={items} />
         ) : (

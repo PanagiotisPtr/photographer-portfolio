@@ -7,21 +7,14 @@ import {
   faChevronLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import withDebounce from "../utils/withDebounce";
-import Image from "../utils/Image";
-
-interface CarouselProps {
-  images: Array<Image>;
-}
-
-interface ClickHandler {
-  (): void;
-}
+import Image from "../utils/types/Image";
+import { CallbackFunction } from "../utils/types/CallbackFunction";
 
 type Direction = "right" | "left";
 
 interface ArrowProps {
   direction: Direction;
-  onClick?: ClickHandler;
+  onClick?: CallbackFunction<void>;
 }
 
 const Arrow: React.FC<ArrowProps> = ({ direction, onClick = () => {} }) => {
@@ -40,22 +33,33 @@ const Arrow: React.FC<ArrowProps> = ({ direction, onClick = () => {} }) => {
   );
 };
 
-const CarouselImage: React.FC<Image> = ({ src, alt }) => {
+const CarouselImage: React.FC<{
+  image: Image;
+  callback?: CallbackFunction<void>;
+}> = ({ image, callback }) => {
   const isDesktop = useIsDesktop();
 
   return (
-    <div className={styles.item}>
-      <img src={src} alt={alt} />
+    <div className={styles.item} onClick={() => callback && callback()}>
+      <img src={image.src} alt={image.alt} />
     </div>
   );
 };
 
-const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
+interface CarouselProps {
+  images: Array<Image>;
+  imageClickCallback?: CallbackFunction<void>;
+}
+
+const Carousel: React.FC<CarouselProps> = ({
+  images = [],
+  imageClickCallback,
+}) => {
   const isDesktop = useIsDesktop();
   const container = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: Direction) => {
-    if (container.current === null) {
+    if (!container.current) {
       return;
     }
 
@@ -79,26 +83,14 @@ const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
         {isDesktop && (
           <Arrow direction="right" onClick={debouncedScrollRight} />
         )}
-        <CarouselImage
-          src="https://cdn.pixabay.com/photo/2021/07/29/20/23/mountains-6508015_960_720.jpg"
-          alt="picture of trees"
-        />
-        <CarouselImage
-          src="https://cdn.pixabay.com/photo/2021/07/30/20/28/montmartre-6510653_960_720.jpg"
-          alt="picture of trees"
-        />
-        <CarouselImage
-          src="https://cdn.pixabay.com/photo/2021/06/27/14/32/raspberry-6368999_960_720.png"
-          alt="picture of trees"
-        />
-        <CarouselImage
-          src="https://cdn.pixabay.com/photo/2019/06/22/18/31/love-4292211_960_720.jpg"
-          alt="picture of trees"
-        />
-        <CarouselImage
-          src="https://cdn.pixabay.com/photo/2021/01/29/08/10/musician-5960112_960_720.jpg"
-          alt="picture of trees"
-        />
+        {images &&
+          images.map((image: Image, index: number) => (
+            <CarouselImage
+              key={index}
+              image={image}
+              callback={() => imageClickCallback && imageClickCallback(index)}
+            />
+          ))}
       </div>
     </>
   );
