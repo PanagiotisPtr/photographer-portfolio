@@ -1,4 +1,4 @@
-import MainMenu from '../components/MainMenu';
+import MainMenu from "../components/MainMenu";
 
 const About = () => {
   return (
@@ -6,7 +6,7 @@ const About = () => {
       <MainMenu />
       <h1>About</h1>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

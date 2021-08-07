@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-type CallbackFunction<T> = (...args: any[]) => T;
+export type CallbackFunction<T> = (...args: any[]) => T;
 
 /**
  * withDebounce
  *
  * Prevents function from being called too many times
  * within a time period
- * 
+ *
  * @param {CallbackFunction<T>} callback the function to call
  * @param {number} delay the time to wait before calling again
  *
@@ -27,9 +27,9 @@ const withDebounce = <T extends unknown>(
 
       return callback(...args);
     }
-    
+
     return null;
-  }
+  };
 };
 
 export default withDebounce;
