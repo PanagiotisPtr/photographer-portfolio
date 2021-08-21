@@ -5,6 +5,7 @@ import Image from "../utils/types/Image";
 import { useEffect, useState } from "react";
 import useKeyEvents from "../hooks/useKeyEvents";
 import Introduction from "../components/Introduction";
+import ImageNavigation from "../components/ImageNavigation";
 
 const Home = () => {
   const [showImages, setShowImages] = useState<boolean>(false);
@@ -54,6 +55,29 @@ const Home = () => {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus erat nibh, sed molestie lorem ornare at. Donec non est nisi. Aliquam blandit ac ex a aliquam. In et lobortis lorem. Fusce aliquam sapien vitae eleifend euismod. Nullam sapien magna, laoreet ut tristique id, laoreet vel tellus. Vestibulum eget tincidunt purus. Nam nibh leo, tristique id venenatis nec, congue sit amet ligula. Mauris interdum commodo gravida.\nNullam rhoncus sapien eu facilisis finibus. In ut eleifend quam, ut commodo ex. Vestibulum blandit convallis eros, sit amet egestas enim mollis sed. Phasellus non diam vitae sapien sollicitudin ornare id a magna. Nam pulvinar eleifend auctor. Aliquam ac varius lacus, in molestie odio. Fusce ex ex, viverra dapibus lacinia eget, pretium non urna. In porta feugiat mauris eu feugiat. Praesent sodales sem odio, in laoreet mi rhoncus condimentum. Vivamus sagittis pellentesque enim, non congue mauris.";
   const rightText = "";
 
+  const navImages = [
+    {
+      src: "https://cdn.pixabay.com/photo/2021/07/30/20/28/montmartre-6510653_960_720.jpg",
+      label: "Architecture",
+      link: "/about",
+    },
+    {
+      src: "https://cdn.pixabay.com/photo/2021/07/30/20/28/montmartre-6510653_960_720.jpg",
+      label: "Architecture",
+      link: "/about",
+    },
+    {
+      src: "https://cdn.pixabay.com/photo/2021/07/30/20/28/montmartre-6510653_960_720.jpg",
+      label: "Architecture",
+      link: "/about",
+    },
+    {
+      src: "https://cdn.pixabay.com/photo/2021/07/30/20/28/montmartre-6510653_960_720.jpg",
+      label: "Architecture",
+      link: "/about",
+    },
+  ];
+
   const closeImageViewer = () => {
     if (!showImages) {
       return;
@@ -95,6 +119,7 @@ const Home = () => {
         leftText={leftText}
         rightText={leftText}
       />
+      <ImageNavigation navigationImages={navImages} />
       <h1>Home</h1>
     </div>
   );

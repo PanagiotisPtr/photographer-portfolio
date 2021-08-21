@@ -1,0 +1,48 @@
+.rowContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80vw;
+}
+
+.navContainer > * {
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+}
+
+.navContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imageLabel {
+  font-size: 2em;
+  color: white;
+  opacity: 1 !important;
+}
+
+.image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.imageContainer:hover > * {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 35vh;
+  background-color: black;
+}
