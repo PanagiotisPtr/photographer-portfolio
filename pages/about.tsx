@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import MainMenu from "../components/MainMenu";
 
 const About = () => {
@@ -5,6 +6,7 @@ const About = () => {
     <div>
       <MainMenu />
       <h1>About</h1>
+      <Footer />
     </div>
   );
 };

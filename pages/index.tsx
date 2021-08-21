@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import useKeyEvents from "../hooks/useKeyEvents";
 import Introduction from "../components/Introduction";
 import ImageNavigation from "../components/ImageNavigation";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [showImages, setShowImages] = useState<boolean>(false);
@@ -120,7 +121,7 @@ const Home = () => {
         rightText={leftText}
       />
       <ImageNavigation navigationImages={navImages} />
-      <h1>Home</h1>
+      <Footer />
     </div>
   );
 };
