@@ -7,6 +7,8 @@ const MainMenu: React.FC = () => {
       title="Odyssey Sapoznikov"
       items={[
         { label: "Home", link: "/" },
+        { label: "Architecture", link: "/architecture" },
+        { label: "Commercial", link: "/commercial" },
         { label: "About", link: "/about" },
       ]}
     />
