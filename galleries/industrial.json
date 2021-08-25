@@ -1,0 +1,32 @@
+{
+  "en": {
+    "title": "Industrial",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor placerat fringilla. Suspendisse scelerisque a urna sit amet tempor. Suspendisse imperdiet sem est, quis aliquet libero cursus at. In eu elementum tortor, sit amet porttitor felis. Integer lobortis tristique dui, vitae efficitur ante. Praesent sit amet pretium felis.\nPellentesque a ligula ultrices, elementum quam sit amet, sodales elit. Aenean rhoncus feugiat dui, vitae bibendum nisl rhoncus nec. Ut vitae sem rutrum, malesuada mi in, venenatis eros. Donec eu tempus sem. Phasellus vitae libero in elit consectetur fermentum. Etiam elementum placerat malesuada. Nullam blandit, tortor nec vulputate porta, libero velit condimentum ipsum, eu faucibus nisi nisl ut urna. Fusce quis eleifend arcu."
+  },
+  "gr": {
+    "title": "Some fancy houses",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempor placerat fringilla. Suspendisse scelerisque a urna sit amet tempor. Suspendisse imperdiet sem est, quis aliquet libero cursus at. In eu elementum tortor, sit amet porttitor felis. Integer lobortis tristique dui, vitae efficitur ante. Praesent sit amet pretium felis.\nPellentesque a ligula ultrices, elementum quam sit amet, sodales elit. Aenean rhoncus feugiat dui, vitae bibendum nisl rhoncus nec. Ut vitae sem rutrum, malesuada mi in, venenatis eros. Donec eu tempus sem. Phasellus vitae libero in elit consectetur fermentum. Etiam elementum placerat malesuada. Nullam blandit, tortor nec vulputate porta, libero velit condimentum ipsum, eu faucibus nisi nisl ut urna. Fusce quis eleifend arcu."
+  },
+  "images": [
+    {
+      "src": "https://cdn.pixabay.com/photo/2021/07/29/20/23/mountains-6508015_960_720.jpg",
+      "alt": "some trees"
+    },
+    {
+      "src": "https://cdn.pixabay.com/photo/2021/07/29/20/23/mountains-6508015_960_720.jpg",
+      "alt": "some trees"
+    },
+    {
+      "src": "https://cdn.pixabay.com/photo/2021/07/29/20/23/mountains-6508015_960_720.jpg",
+      "alt": "some trees"
+    },
+    {
+      "src": "https://cdn.pixabay.com/photo/2021/07/29/20/23/mountains-6508015_960_720.jpg",
+      "alt": "some trees"
+    },
+    {
+      "src": "https://cdn.pixabay.com/photo/2021/07/29/20/23/mountains-6508015_960_720.jpg",
+      "alt": "some trees"
+    }
+  ]
+}
